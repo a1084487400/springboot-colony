@@ -1,0 +1,29 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: provider-ticket
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://139.199.201.124:3306/blog
+    driver-class-name: com.mysql.jdbc.Driver
+#  profiles:
+#    active:dev
+eureka:
+  instance:
+    prefer-ip-address: true #注册服务的时候使用服务ip地址
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#Mybatis配置
+mybatis:
+  mapper-locations:
+    - classpath:/mapper/*.xml
+#日志配置
+log:
+  url: D:\\logtext
+logging:
+  level:
+    com:
+      example: trace

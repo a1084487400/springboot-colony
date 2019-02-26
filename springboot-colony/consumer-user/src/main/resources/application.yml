@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: consumer-user
+server:
+  port: 8200
+eureka:
+  instance:
+    prefer-ip-address: true #注册服务的时候使用服务ip地址
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#SpringBoot监控管理
+management:
+  security:
+    enabled: false
+#开启远程关闭应用
+endpoints:
+  shutdown:
+    enabled: true
